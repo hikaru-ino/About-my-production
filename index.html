@@ -3,114 +3,83 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>私のWebページ</title>
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #f7f7f2;
-        --text: #232323;
-        --muted: #666a73;
-        --accent: #2f6f73;
-        --border: #deded5;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.6;
-        color: var(--text);
-        background: var(--bg);
-      }
-
-      main {
-        width: min(920px, calc(100% - 32px));
-        margin: 0 auto;
-        padding: 64px 0;
-      }
-
-      header {
-        padding-bottom: 40px;
-        border-bottom: 1px solid var(--border);
-      }
-
-      h1 {
-        margin: 0 0 16px;
-        font-size: clamp(2.25rem, 7vw, 4.5rem);
-        line-height: 1.05;
-      }
-
-      p {
-        margin: 0;
-      }
-
-      .lead {
-        max-width: 680px;
-        color: var(--muted);
-        font-size: 1.15rem;
-      }
-
-      section {
-        padding: 40px 0 0;
-      }
-
-      h2 {
-        margin: 0 0 12px;
-        font-size: 1.25rem;
-      }
-
-      a {
-        color: var(--accent);
-        text-decoration-thickness: 0.08em;
-        text-underline-offset: 0.2em;
-      }
-
-      footer {
-        margin-top: 56px;
-        padding-top: 24px;
-        border-top: 1px solid var(--border);
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-    </style>
+    <title>hikaru | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div id="particle-canvas" aria-hidden="true"></div>
     <main>
       <header>
-        <h1>My Website</h1>
-        <p class="lead">
-          GitHub Pagesで公開するシンプルな個人サイトです。プロフィール、制作物、連絡先などをここにまとめられます。
-        </p>
+        <div class="hero-content">
+          <div>
+            <p class="eyebrow">Keio University / Machine Learning</p>
+            <h1>hikaru</h1>
+          </div>
+          <p
+            class="lead typing-text"
+            data-text="慶應義塾大学で学びながら、機械学習に関心を持って取り組んでいます。 このページでは、学習内容や制作物をポートフォリオとしてまとめていきます。"
+          >
+            慶應義塾大学で学びながら、機械学習に関心を持って取り組んでいます。
+            このページでは、学習内容や制作物をポートフォリオとしてまとめていきます。
+          </p>
+          <div class="actions">
+            <a class="button" href="https://github.com/hikaru-ino">GitHubを見る</a>
+            <a class="button secondary" href="#works">Works</a>
+          </div>
+        </div>
+        <figure class="hero-image">
+          <img src="images.webp" alt="hikaruのプロフィール画像">
+        </figure>
       </header>
 
       <section aria-labelledby="about-title">
         <h2 id="about-title">About</h2>
-        <p>
-          ここに自己紹介を書きます。興味のある分野、取り組んでいること、公開したい情報に合わせて編集してください。
-        </p>
+        <div class="grid">
+          <article class="card">
+            <h3>Profile</h3>
+            <p>
+              hikaruです。慶應義塾大学に所属し、技術やデータを活用したものづくりに興味があります。
+            </p>
+          </article>
+          <article class="card">
+            <h3>Interest</h3>
+            <p>
+              特に機械学習に関心があり、基礎理論から実装まで幅広く学んでいます。
+            </p>
+            <div class="tag-list" aria-label="興味のある分野">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Data</span>
+              <span class="tag">Programming</span>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section aria-labelledby="works-title">
+      <section id="works" aria-labelledby="works-title">
         <h2 id="works-title">Works</h2>
-        <p>
-          制作物やプロジェクトへのリンクを掲載できます。
-        </p>
+        <div class="card">
+          <h3>GitHub</h3>
+          <p>
+            学習や制作の記録をGitHubで公開しています。今後、機械学習に関するプロジェクトやポートフォリオを追加していきます。
+          </p>
+          <p>
+            <a href="https://github.com/hikaru-ino">github.com/hikaru-ino</a>
+          </p>
+        </div>
       </section>
 
       <section aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
         <p>
-          連絡先やSNSへのリンクを追加してください。
+          GitHubから活動内容をご覧ください。
         </p>
       </section>
 
       <footer>
-        <p>&copy; 2026 My Website</p>
+        <p>&copy; 2026 hikaru</p>
       </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
