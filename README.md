@@ -1,2 +1,2 @@
-# hikaru2
-AIエージェントを利用して、GithubによりWebsiteを作成する。
+# hikaru
+Githubにより制作物を管理する。
